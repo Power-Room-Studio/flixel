@@ -154,6 +154,10 @@ class BitmapFrontEnd
 		{
 			return FlxGraphic.fromBitmapData(cast Graphic, Unique, Key);
 		}
+		else if ((Std.string(Graphic).endsWith(".webp")))
+		{
+			return FlxGraphic.fromBitmapData(cast webp.Webp.getBitmapData(Std.string(Graphic)), Unique, Key);
+		}
 
 		// String case
 		return FlxGraphic.fromAssetKey(Std.string(Graphic), Unique, Key);
